@@ -1,0 +1,11 @@
+{
+  "type": "sqlite",
+  "database": "pokemon.db",
+  "entities": ["dist/**/*.entity.js"],
+  "migrations": ["dist/migration/*.js"],
+  "cli": {
+    "migrationsDir": "src/migration"
+  },
+  "synchronize": false,
+  "autoLoadEntities": true
+}
