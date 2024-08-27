@@ -1,7 +1,8 @@
-import { DataSource } from 'typeorm';
+//
 import { Pokemon } from './src/pokemon/entities/pokemon.entity';
 import { CreatePokemonTable1724713996913 } from './src/migration/1724713996913-CreatePokemonTable';
 import * as dotenv from 'dotenv';
+import { DataSource } from 'typeorm';
 
 dotenv.config(); // Cargar variables de entorno desde el archivo .env
 
