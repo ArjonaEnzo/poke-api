@@ -1,5 +1,3 @@
-// src/pokemon/battle.controller.ts
-
 import {
   Controller,
   Post,
@@ -84,6 +82,6 @@ export class BattleController {
   // Método para obtener el historial de batallas
   @Get('/history')
   async findAllBattleResults() {
-    return await this.battleResultRepository.find(); // Retorna todos los resultados de batallas
+    return await this.battleResultRepository.find();
   }
 }

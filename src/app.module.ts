@@ -1,5 +1,3 @@
-// src/app.module.ts
-
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PokemonModule } from './pokemon/pokemon.module';
@@ -14,7 +12,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
       migrations: [__dirname + '/migration/**/*.js'], // Ruta para las migraciones compiladas
       migrationsRun: true, // Ejecuta migraciones automáticamente al iniciar la aplicación
     }),
-    PokemonModule, // El módulo principal que maneja todo lo relacionado con Pokémon
+    PokemonModule,
   ],
   controllers: [],
   providers: [],
