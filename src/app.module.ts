@@ -6,11 +6,11 @@ import { PokemonModule } from './pokemon/pokemon.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'pokemon.db',
+      database: process.env.DB_DATABASE || 'pokemon.db',
       autoLoadEntities: true,
-      synchronize: false, // true solo en desarrollo
-      migrations: [__dirname + '/migration/**/*.js'], // Ruta para las migraciones compiladas
-      migrationsRun: true, // Ejecuta migraciones automáticamente al iniciar la aplicación
+      synchronize: process.env.TYPEORM_SYNC === 'true', // Controlar sincronización con variable de entorno
+      migrations: [__dirname + '/migration/**/*.js'],
+      migrationsRun: true,
     }),
     PokemonModule,
   ],
