@@ -64,7 +64,7 @@ export class BattleController {
 
     const winner = pokemon1.hp > 0 ? pokemon1 : pokemon2;
 
-    // Guardar el resultado en la base de datos
+    // Guardar el resultado
     const battleResult = this.battleResultRepository.create({
       pokemon1Id: pokemon1.id,
       pokemon2Id: pokemon2.id,
